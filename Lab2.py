@@ -25,3 +25,25 @@ def sort_temperature():
 
 def calc_median_temperature():
     print("calc_median_temperature")
+
+def calc_average_temperature(temperature_list):
+    # Calculate the average temperature
+    average = sum(temperature_list) / len(temperature_list)
+    return average
+
+
+def calc_min_max_temperature(temperature_list):
+    # Find minimum and maximum temperature
+    min_temp = min(temperature_list)
+    max_temp = max(temperature_list)
+    # Return both values in a list [min, max]
+    return [min_temp, max_temp]
+
+temperatures = [30.5, 32.0, 28.7, 31.2]
+avg = calc_average_temperature(temperatures)
+min_max = calc_min_max_temperature(temperatures)
+print("Average temperature:", round(avg, 2))
+print("Min and Max temperatures:", min_max)
+display_main_menu()
+numbers = get_user_input()
+print("Numbers entered:", numbers)
