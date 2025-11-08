@@ -6,7 +6,7 @@ def display_main_menu():
 def get_user_input():
     print("get_user_input")
     # Step 1: Read user input
-    user_input = input("Enter numbers: ")
+    user_input = input("Enter numbers: ")   
     # Step 2: Split input string into a list of strings
     input_list = user_input.split(",")
     # Step 3: Convert list of strings to list of floats
