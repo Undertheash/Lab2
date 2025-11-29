@@ -24,14 +24,14 @@ def calc_average(input):
 
 def find_min_max(input):
     print("find_min_max")
-    min = input[0]
-    max = input[0]
+    min_val = input[0]
+    max_val = input[0]
     for item in input: 
-        if item < min:
-            item = min
-        if item > max: 
-            max = item 
-    return [min,max]
+        if item < min_val:
+            min_val = item
+        if item > max_val: 
+            max_val = item 
+    return [min_val,max_val]
 
 def sort_temperature(temperature_list):
     return sorted(temperature_list)
@@ -45,16 +45,7 @@ def calc_median_temperature(input):
         upper=math.floor(len(input)/2)
         return (input[upper]+input[upper-1])/2   
 
-def calc_average_temperature(temperature_list):
-    # Calculate the average temperature
-    average = sum(temperature_list) / len(temperature_list)
-    return average
 
 
-def calc_min_max_temperature(temperature_list):
-    # Find minimum and maximum temperature
-    min_temp = min(temperature_list)
-    max_temp = max(temperature_list)
-    # Return both values in a list [min, max]
-    return [min_temp, max_temp]
+
 
