@@ -1,6 +1,6 @@
 def calculate_bmi(height, weight):
     print("Height = " + str(height))
-    print("Weight = " + str(weight))
+    print("Weight = " + str(weight)) # str() converts non-string data types (like float or int) into strings.
     # CALCULATE BMI
     bmi = weight / (height ** 2)
     # PRINT BMI

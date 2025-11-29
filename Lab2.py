@@ -1,3 +1,4 @@
+import math
 print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
 
 def display_main_menu():
@@ -14,17 +15,35 @@ def get_user_input():
     # Step 4: Return the list of floats
     return float_list
 
-def calc_average():
+def calc_average(input):
     print("calc_average")
+    sum = 0
+    for item in input:
+        sum += item 
+    return sum/len(input)
 
-def find_min_max():
+def find_min_max(input):
     print("find_min_max")
+    min = input[0]
+    max = input[0]
+    for item in input: 
+        if item < min:
+            item = min
+        if item > max: 
+            max = item 
+    return [min,max]
 
 def sort_temperature():
     print("sort_temperature")
 
-def calc_median_temperature():
+def calc_median_temperature(input):
     print("calc_median_temperature")
+    input=sort_temperature(input)
+    if len(input)%2:
+        return input[math.floor(len(input)/2)]
+    else:
+        upper=math.floor(len(input)/2)
+        return (input[upper]+input[upper-1])/2   
 
 def calc_average_temperature(temperature_list):
     # Calculate the average temperature
