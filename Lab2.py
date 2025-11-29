@@ -33,8 +33,8 @@ def find_min_max(input):
             max = item 
     return [min,max]
 
-def sort_temperature():
-    print("sort_temperature")
+def sort_temperature(temperature_list):
+    return sorted(temperature_list)
 
 def calc_median_temperature(input):
     print("calc_median_temperature")
@@ -58,11 +58,3 @@ def calc_min_max_temperature(temperature_list):
     # Return both values in a list [min, max]
     return [min_temp, max_temp]
 
-temperatures = [30.5, 32.0, 28.7, 31.2]
-avg = calc_average_temperature(temperatures)
-min_max = calc_min_max_temperature(temperatures)
-print("Average temperature:", round(avg, 2))
-print("Min and Max temperatures:", min_max)
-display_main_menu()
-numbers = get_user_input()
-print("Numbers entered:", numbers)
